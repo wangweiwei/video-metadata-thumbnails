@@ -93,7 +93,7 @@ console.log('Thumbnails:', await video.getThumbnails({
   * 描述: 获取帧图片的终止帧
 
 ## ⚠️  注意
-​	需要浏览器支持`Blob`对象`
+​	需要浏览器支持`Blob`对象
 
 ## **许可**
 
