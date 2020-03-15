@@ -1,0 +1,66 @@
+{
+  "name": "video-metadata-thumbnails",
+  "version": "1.0.0",
+  "description": "Convenience method to get metadata and thumbnails of HTML5 video or audio(only metadata) Blob.",
+  "main": "lib/video-metadata-thumbnails.umd.js",
+  "module": "lib/video-metadata-thumbnails.es.js",
+  "browser": {
+    "lib/video-metadata-thumbnails.iife.js": "lib/video-metadata-thumbnails.iife.js",
+    "lib/video-metadata-thumbnails.cjs.js": "lib/video-metadata-thumbnails.cjs.js"
+  },
+  "files": [
+    "lib/**/*",
+    "typings/**/*.d.ts"
+  ],
+  "typings": "typings/**/*.d.ts",
+  "sideEffects": false,
+  "keywords": [
+    "video",
+    "thumbnails",
+    "preview",
+    "metadata",
+    "blob",
+    "duration",
+    "视频",
+    "缩略图",
+    "预览",
+    "帧",
+    "图片",
+    "元数据"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "clean": "rimraf node_modules",
+    "rm": "rimraf lib",
+    "tslint": "tslint -p .",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\""
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-json": "^4.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-replace": "^2.3.1",
+    "lerna": "^3.20.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.0.3",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "rollup-watch": "^4.3.1",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangweiwei/video-metadata-thumbnails.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wangweiwei/video-metadata-thumbnails/issues"
+  },
+  "homepage": "https://github.com/wangweiwei/video-metadata-thumbnails#readme",
+  "author": "wangweiwei",
+  "license": "MIT"
+}

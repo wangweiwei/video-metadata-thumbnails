@@ -1,0 +1,31 @@
+.thumbnails-container {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -moz-flex;
+  display: flex;
+  width: 100%;
+  overflow: scroll;
+}
+.thumbnails-container div {
+  position: relative;
+  border: 3px dashed;
+  border-left: none;
+}
+.thumbnails-container div:first-child {
+  border-left: 3px dashed;
+}
+.thumbnails-container span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  text-align: center;
+}
+.thumbnails-container img {
+  height: 160px;
+}

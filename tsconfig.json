@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowUnreachableCode": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "target": "es5",
+    "module": "es6",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": false,
+    "sourceMap": true,
+    "outDir": "./lib",
+    "lib": [
+      "dom",
+      "es2018"
+    ],
+    "strictNullChecks": true,
+    "downlevelIteration": true,
+    "moduleResolution": "node",
+    "typeRoots": [
+      "typings",
+      "node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "docs",
+    "public",
+    "scripts",
+    "test"
+  ]
+}
