@@ -74,7 +74,7 @@ export default {
     serve({
       host: 'localhost',
       port: 8000,
-      contentBase: ['lib', 'public'],
+      contentBase: ['lib', 'examples'],
     })
   ],
   watch: {

@@ -26,7 +26,7 @@
   "exclude": [
     "node_modules",
     "docs",
-    "public",
+    "examples",
     "scripts",
     "test"
   ]
