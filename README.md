@@ -27,7 +27,7 @@ yarn add video-metadata-thumbnails
 
 ```html
 <input type="file" onchange="onChange(this.files)" />
-<script src="video-metadata-thumbnails.iife.js"></script>
+<script src="your cdn path/video-metadata-thumbnails.iife.js"></script>
 <script>
 function onChange(files) {
   __video_metadata_thumbnails__.getMetadata(files[0]).then(function(metadata) {
