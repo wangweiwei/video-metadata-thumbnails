@@ -93,7 +93,7 @@ console.log('Thumbnails:', await video.getThumbnails({
 
 ## **Example**
 
-[Click Me](https://www.ellow.cn/examples/video-metadata-thumbnails/index.html)
+[![Software License](https://img.shields.io/badge/clicke-me-red.svg)](https://www.ellow.cn/examples/video-metadata-thumbnails/index.html)
 
 ## **⚠️  Notice**
 

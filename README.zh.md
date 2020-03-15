@@ -94,7 +94,7 @@ console.log('Thumbnails:', await video.getThumbnails({
 
 ## **例子**
 
-[点击](https://www.ellow.cn/examples/video-metadata-thumbnails/index.html)
+[![Software License](https://img.shields.io/badge/点我-看例子-red.svg)](https://www.ellow.cn/examples/video-metadata-thumbnails/index.html)
 
 ## **⚠️  注意**
 ​	需要浏览器支持`Blob`对象
