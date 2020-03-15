@@ -25,7 +25,7 @@ yarn add video-metadata-thumbnails
 
 ### 通过getMetadata和getThumbnails方法
 
-​	将 `video-metadata-thumbnails.iife.js` 添加到你的DOM元素中，然后通过`Promise`的 `then`获取 元数据或者视频缩略图：
+​	将 `video-metadata-thumbnails.iife.js` 添加到你的`script`标签中，然后通过`Promise`的 `then`获取 元数据或者视频缩略图：
 
 ```html
 <input type="file" onchange="onChange(this.files)" />
