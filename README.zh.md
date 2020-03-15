@@ -92,6 +92,9 @@ console.log('Thumbnails:', await video.getThumbnails({
   * 默认值: 0
   * 描述: 获取帧图片的终止帧
 
+## ⚠️  注意
+​	需要浏览器支持`Blob`对象`
+
 ## **许可**
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/wangweiwei/video-metadata-thumbnails/blob/master/LICENSE)

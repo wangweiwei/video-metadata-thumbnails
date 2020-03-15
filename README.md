@@ -91,6 +91,10 @@ console.log('Thumbnails:', await video.getThumbnails({
   * default: 0
   * description: the end of frame
 
+## ⚠️  Notice
+​	`Blob` object is required in browser.
+
+
 ## **License**
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/wangweiwei/video-metadata-thumbnails/blob/master/LICENSE)
 
