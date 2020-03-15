@@ -44,7 +44,14 @@ export class Video {
     start: 0
   };
 
+  /**
+   * 是否第一帧
+   */
   private isStarted: boolean = true;
+
+  /**
+   * 帧图片数
+   */
   private count: number = 0;
 
   /**
@@ -61,9 +68,8 @@ export class Video {
    *
    * @param blob string | Blob
    *
-   * @param option IOption 选项
    */
-  constructor(blob: string | Blob, option?: IOption) {
+  constructor(blob: string | Blob) {
     if (!blob) {
       throw new Error('__NAME__ params error');
     }
@@ -85,10 +91,6 @@ export class Video {
         ? (blob as string)
         : URL.createObjectURL(blob);
 
-    // 选项赋值
-    if (option) {
-      this.option = Object.assign(this.option, option);
-    }
 
     // 视频播放结束相关回收
     const endedHandler = () => {
@@ -111,9 +113,15 @@ export class Video {
   /**
    * 获取帧图片
    *
+   * @param option IOption 选项
+   *
    * @return Promise<(Blob | null)[]> 帧图片Blob集合
    */
-  getThumbnails(): Promise<IThumbnail[]> {
+  getThumbnails(option?: IOption): Promise<IThumbnail[]> {
+    // 选项赋值
+    if (option) {
+      this.option = Object.assign(this.option, option);
+    }
     return new Promise((resolve, reject) => {
       const canplayHandler = () => {
         const interval = this.option.interval || 1;
@@ -332,7 +340,7 @@ export async function getMetadata(blob: string | Blob) {
  * @param option IOption 选项
  */
 export async function getThumbnails(blob: string | Blob, option?: IOption) {
-  const video: Video = new Video(blob, option);
-  const thumbnails = await video.getThumbnails();
+  const video: Video = new Video(blob);
+  const thumbnails = await video.getThumbnails(option);
   return thumbnails;
 }

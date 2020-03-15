@@ -7,6 +7,8 @@
 
 Convenience method(or Video object) to get metadata and thumbnails of HTML5 video or audio(only metadata) Blob.
 
+English | [简体中文](https://github.com/wangweiwei/video-metadata-thumbnails/blob/master/README.zh.md)
+
 ## **Installation**
 
 ```shell
@@ -59,11 +61,11 @@ console.log('Thumbnails: ', thumbnails);
 ```      javascript
 import { Video } from 'video-metadata-thumbnails';
 
-const video = new Video(blob, {
-  quality: 0.6
-});
+const video = new Video(blob);
 console.log('Metadata:', await video.getMetadata());
-console.log('Thumbnails:', await video.getThumbnails())
+console.log('Thumbnails:', await video.getThumbnails({
+  quality: 0.6
+}))
 ```
 
 ## **Thumbnails' Options**
