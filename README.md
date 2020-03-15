@@ -91,7 +91,12 @@ console.log('Thumbnails:', await video.getThumbnails({
   * default: 0
   * description: the end of frame
 
-## ⚠️  Notice
+## **Example**
+
+[Click Me](https://www.ellow.cn/examples/video-metadata-thumbnails/index.html)
+
+## **⚠️  Notice**
+
 ​	`Blob` object is required in browser.
 
 

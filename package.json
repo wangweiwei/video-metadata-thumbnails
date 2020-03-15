@@ -1,6 +1,6 @@
 {
   "name": "video-metadata-thumbnails",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Convenience method to get metadata and thumbnails of HTML5 video or audio(only metadata) Blob.",
   "main": "lib/video-metadata-thumbnails.umd.js",
   "module": "lib/video-metadata-thumbnails.es.js",

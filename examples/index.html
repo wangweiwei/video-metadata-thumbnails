@@ -30,37 +30,61 @@
           HTML5 video or audio(only metadata) Blob.
         </p>
       </div>
+      <h3 class="card-title">Option</h3>
+      <br/>
       <div class="row">
         <div class="col-md-4 mb-3">
-          <label for="quality">quality</label>
+          <label class="label" for="quality">quality</label>
           <input type="text" id="quality" class="form-control" placeholder="0.7">
         </div>
         <div class="col-md-4 mb-3">
-          <label for="interval">interval</label>
+          <label class="label" for="interval">interval</label>
           <input type="text" id="interval" class="form-control" placeholder="1">
         </div>
         <div class="col-md-4 mb-3">
-          <label for="scale">scale</label>
+          <label class="label" for="scale">scale</label>
           <input type="text" id="scale" class="form-control" placeholder="0.7">
         </div>
       </div>
       <div class="row">
         <div class="col-md-4 mb-3">
-          <label for="start">start</label>
+          <label class="label" for="start">start</label>
           <input type="text" id="start" class="form-control" placeholder="0">
         </div>
         <div class="col-md-4 mb-3">
-          <label for="end">end</label>
+          <label class="label" for="end">end</label>
           <input type="text" id="end" class="form-control" placeholder="">
         </div>
       </div>
+      <br/>
       <hr class="mb-4">
+      <br/>
+      <h3 class="card-title">File</h3>
+      <br/>
       <div class="row">
-        <div class="col-md-6 mb-3">
-          <input type="file" onchange="onChange(this.files)" />
+        <div class="col-md-12 mb-3">
+          <input type="file" class="custom-file-input" onchange="onChange(this.files)">
+          <label class="custom-file-label" style="margin: 0 15px;" for="validatedCustomFile">Choose file...</label>
         </div>
-        <div class="col-md-6 mb-3">
-          <div id="loading" style="display: none" class="spinner-border" role="status">
+      </div>
+      <br>
+      <!-- <div class="row"> -->
+      <!--   <div class="col-md-12 mb-3"> -->
+      <!--     <div class="input-group"> -->
+      <!--       <div class="input-group-prepend"> -->
+      <!--         <div class="input-group-text">blob:</div> -->
+      <!--       </div> -->
+      <!--       <input type="text" class="form-control" id="URL" placeholder="URL"> -->
+      <!--       <div class="input-group-append"> -->
+      <!--         <button class="btn btn-primary" onclick="onGetThumbnails()" type="button">Get Thumbnails</button> -->
+      <!--       </div> -->
+      <!--     </div> -->
+      <!--   </div> -->
+      <!-- </div> -->
+      <br>
+      <div class="row">
+        <div id="loading" style="display: none; text-align: center;" class="col-md-12 mb-3">
+          <div class="spinner-border" role="status">
             <span class="sr-only">Loading...</span>
           </div>
         </div>

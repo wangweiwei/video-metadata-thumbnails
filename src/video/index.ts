@@ -167,6 +167,30 @@ export class Video {
               arr[i] = binStr.charCodeAt(i);
             }
             const blob: Blob = new Blob([arr], { type: 'image/jpeg' });
+
+            canvasContext.clearRect(0, 0, $videoWidth, $videoHeight);
+            canvasContext.restore();
+
+            if (isEnded) {
+              videoElement.removeEventListener(
+                'canplaythrough',
+                canplayHandler,
+                false
+              );
+              videoElement.removeEventListener(
+                'timeupdate',
+                timeupdateHandler,
+                false
+              );
+              resolve(this.thumbnails);
+              return;
+            }
+
+            thumbnails.push({
+              currentTime: start + $interval * this.count,
+              blob
+            });
+            this.count++;
           } else {
             this.canvas.toBlob(
               blob => {

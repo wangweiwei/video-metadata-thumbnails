@@ -1,6 +1,10 @@
 function onChange(files) {
+  getThumbnails(files[0])
+}
+
+function getOption() {
   var option = {};
-  var labels = document.getElementsByTagName('label');
+  var labels = document.getElementsByClassName('label');
   for(var i = 0, length = labels.length; i < length; i++) {
     var documentId = labels[i].getAttribute('for');
     var value = document.getElementById(documentId).value;
@@ -8,9 +12,15 @@ function onChange(files) {
       option[documentId] = +value;
     }
   }
+  return option;
+}
+
+function getThumbnails(blob) {
+  var option = getOption();
+  
   document.getElementById('loading').style.display = 'inline-block';
   __video_metadata_thumbnails__
-    .getThumbnails(files[0], option)
+    .getThumbnails(blob, option)
     .then(function(thumbnails) {
       var container = document.getElementById('thumbnails_container');
       container.innerHTML = '';
