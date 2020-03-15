@@ -64,7 +64,9 @@ import { Video } from 'video-metadata-thumbnails';
 
 const video = new Video(blob);
 console.log('Metadata:', await video.getMetadata());
-console.log('Thumbnails:', await video.getThumbnails())
+console.log('Thumbnails:', await video.getThumbnails({
+  quality: 0.6
+}))
 ```
 
 ## **缩略图选项**
