@@ -1,14 +1,14 @@
 function onChange(files) {
-  getThumbnails(files[0])
+  getThumbnails(files[0]);
 }
 
 function getOption() {
   var option = {};
   var labels = document.getElementsByClassName('label');
-  for(var i = 0, length = labels.length; i < length; i++) {
+  for (var i = 0, length = labels.length; i < length; i++) {
     var documentId = labels[i].getAttribute('for');
     var value = document.getElementById(documentId).value;
-    if(value.length) {
+    if (value.length) {
       option[documentId] = +value;
     }
   }
@@ -17,7 +17,7 @@ function getOption() {
 
 function getThumbnails(blob) {
   var option = getOption();
-  
+
   document.getElementById('loading').style.display = 'inline-block';
   __video_metadata_thumbnails__
     .getThumbnails(blob, option)
