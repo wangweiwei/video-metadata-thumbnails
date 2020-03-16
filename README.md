@@ -4,6 +4,8 @@
 [![Download Count](https://img.shields.io/npm/dt/video-metadata-thumbnails.svg)](https://www.npmjs.com/package/video-metadata-thumbnails)
 [![issue](https://img.shields.io/badge/bug-issue-red.svg)](https://github.com/wangweiwei/video-metadata-thumbnails/issues)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/wangweiwei/video-metadata-thumbnails/blob/master/LICENSE)
+[![Dependency Status](https://david-dm.org/wangweiwei/video-metadata-thumbnails.svg)](https://david-dm.org/wangweiwei/video-metadata-thumbnails)
+[![devDependency Status](https://david-dm.org/wangweiwei/video-metadata-thumbnails/dev-status.svg)](https://david-dm.org/wangweiwei/video-metadata-thumbnails?type=dev)
 
 Convenience method(or Video object) to get metadata and thumbnails of HTML5 video or audio(only metadata) Blob.
 

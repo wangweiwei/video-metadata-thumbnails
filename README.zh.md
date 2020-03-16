@@ -4,6 +4,8 @@
 [![Download Count](https://img.shields.io/npm/dt/video-metadata-thumbnails.svg)](https://www.npmjs.com/package/video-metadata-thumbnails)
 [![issue](https://img.shields.io/badge/bug-issue-red.svg)](https://github.com/wangweiwei/video-metadata-thumbnails/issues)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/wangweiwei/video-metadata-thumbnails/blob/master/LICENSE)
+[![Dependency Status](https://david-dm.org/wangweiwei/video-metadata-thumbnails.svg)](https://david-dm.org/wangweiwei/video-metadata-thumbnails)
+[![devDependency Status](https://david-dm.org/wangweiwei/video-metadata-thumbnails/dev-status.svg)](https://david-dm.org/wangweiwei/video-metadata-thumbnails?type=dev)
 
 通过HTML5的Blob获取音视频元数据和帧缩略图（仅视频）。
 
