@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "allowUnreachableCode": true,
+    "declaration": true,
     "strict": true,
     "esModuleInterop": true,
     "target": "es5",

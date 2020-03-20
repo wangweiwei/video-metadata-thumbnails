@@ -25,11 +25,6 @@ export class Video {
   private canvasContext: CanvasRenderingContext2D;
 
   /**
-   * Video实例
-   */
-  private static instance: Video;
-
-  /**
    * 当前Video的帧图片
    */
   private thumbnails: IThumbnail[] = [];
@@ -139,7 +134,7 @@ export class Video {
         const { quality, interval, start, end, scale } = option;
         const { currentTime } = videoElement;
         const isEnded =
-          currentTime >= duration || currentTime > (end || duration);
+          currentTime >= duration || currentTime > (end === undefined  ? duration : end);
         const $interval = interval || 1;
         const $videoWidth = videoWidth * (scale || 1);
         const $videoHeight = videoHeight * (scale || 1);
@@ -349,8 +344,10 @@ export class Video {
  * 获取Metadata信息
  *
  * @param blob string | Blob
+ *
+ * @return Promise<IMeatadata> video元数据信息
  */
-export async function getMetadata(blob: string | Blob) {
+export async function getMetadata(blob: string | Blob): Promise<IMeatadata> {
   const video: Video = new Video(blob);
   const metadata = await video.getMetadata();
   return metadata;
@@ -362,8 +359,10 @@ export async function getMetadata(blob: string | Blob) {
  * @param blob string | Blob
  *
  * @param option IOption 选项
+ *
+ * @return Promise<(Blob | null)[]> 帧图片Blob集合
  */
-export async function getThumbnails(blob: string | Blob, option?: IOption) {
+export async function getThumbnails(blob: string | Blob, option?: IOption) : Promise<IThumbnail[]> {
   const video: Video = new Video(blob);
   const thumbnails = await video.getThumbnails(option);
   return thumbnails;

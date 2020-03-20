@@ -60,6 +60,8 @@ export default {
     }),
     typescript({
       exclude: 'node_modules/**',
+      rollupCommonJSResolveHack: false,
+      clean: true,
       typescript: require('typescript')
     }),
     nodeResolve({
