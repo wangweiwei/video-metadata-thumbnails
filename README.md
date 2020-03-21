@@ -29,7 +29,7 @@ yarn add video-metadata-thumbnails
 
 ### getMetadata method &  getThumbnails method
 
-​	Add `video-metadata-thumbnails.iife.js` to your document and get the metadata or thumbnails value of the promise returned by `then`:
+​	Add `video-metadata-thumbnails.iife.js`([![Download Javascript File](https://img.shields.io/badge/-Download--Javascript--File-blue?logo=javascript)](https://www.ellow.cn/examples/video-metadata-thumbnails/index.html)) to your document and get the metadata or thumbnails value of the promise returned by `then`:
 
 ```html
 <input type="file" onchange="onChange(this.files)" />

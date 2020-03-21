@@ -1,5 +1,12 @@
 .DS_Store
 node_modules
+/lib/video
+/lib/inde.d.ts
+/lib/video-metadata-thumbnails.*.*.map
+/lib/video-metadata-thumbnails.cjs.js
+/lib/video-metadata-thumbnails.es.js
+/lib/video-metadata-thumbnails.umd.js
+
 /docs
 
 # local env files
