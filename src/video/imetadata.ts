@@ -1,7 +1,7 @@
 /**
  * 元数据约束
  */
-export interface IMeatadata {
+export interface IMetadata {
   /**
    * 视频宽度
    */
