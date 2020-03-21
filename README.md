@@ -97,7 +97,7 @@ console.log('Thumbnails:', await video.getThumbnails({
 
 ## **Example**
 
-[![Example Online](https://img.shields.io/badge/-在线例子-blue?style=for-the-badge&logo=internet-explorer)](https://www.ellow.cn/examples/video-metadata-thumbnails/index.html)
+[![Example Online](https://img.shields.io/badge/-Example--Online-blue?style=for-the-badge&logo=internet-explorer)](https://www.ellow.cn/examples/video-metadata-thumbnails/index.html)
 
 ## **⚠️  Notice**
 
