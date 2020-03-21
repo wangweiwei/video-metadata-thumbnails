@@ -1,4 +1,4 @@
-import { IMeatadata } from './imeatadata';
+import { IMetadata } from './imetadata';
 import { IOption } from './ioption';
 import { IThumbnail } from './ithumbnail';
 
@@ -253,9 +253,9 @@ export class Video {
   /**
    * 获取Metadata信息
    *
-   * @return Promise<IMeatadata> video元数据信息
+   * @return Promise<IMetadata> video元数据信息
    */
-  getMetadata(): Promise<IMeatadata> {
+  getMetadata(): Promise<IMetadata> {
     return new Promise((resolve, reject) => {
       const loadedmetadataHandler = () => {
         try {
