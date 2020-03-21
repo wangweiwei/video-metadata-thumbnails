@@ -1,11 +1,13 @@
 # **Video Metadata & Thumbnails**
 
-[![Latest Version on NPM](https://img.shields.io/npm/v/video-metadata-thumbnails.svg?style=flat-square)](https://npmjs.com/package/video-metadata-thumbnails)
-[![Download Count](https://img.shields.io/npm/dt/video-metadata-thumbnails.svg)](https://www.npmjs.com/package/video-metadata-thumbnails)
-[![issue](https://img.shields.io/badge/bug-issue-red.svg)](https://github.com/wangweiwei/video-metadata-thumbnails/issues)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/wangweiwei/video-metadata-thumbnails/blob/master/LICENSE)
-[![Dependency Status](https://david-dm.org/wangweiwei/video-metadata-thumbnails.svg)](https://david-dm.org/wangweiwei/video-metadata-thumbnails)
-[![devDependency Status](https://david-dm.org/wangweiwei/video-metadata-thumbnails/dev-status.svg)](https://david-dm.org/wangweiwei/video-metadata-thumbnails?type=dev)
+[![Latest Version on NPM](https://img.shields.io/npm/v/video-metadata-thumbnails)](https://npmjs.com/package/video-metadata-thumbnails)
+[![Issue](https://img.shields.io/badge/-help--wanted-brightgreen)](https://github.com/wangweiwei/video-metadata-thumbnails/issues)
+[![Software License](https://img.shields.io/npm/l/video-metadata-thumbnails)](https://github.com/wangweiwei/video-metadata-thumbnails/blob/master/LICENSE)
+[![Contributors Anon](https://img.shields.io/github/contributors-anon/wangweiwei/video-metadata-thumbnails)](https://github.com/wangweiwei/video-metadata-thumbnails)
+[![Code Size](https://img.shields.io/github/languages/code-size/wangweiwei/video-metadata-thumbnails)](https://github.com/wangweiwei/video-metadata-thumbnails)
+[![Languages Count](https://img.shields.io/github/languages/count/wangweiwei/video-metadata-thumbnails)](https://github.com/wangweiwei/video-metadata-thumbnails)
+[![Languages](https://img.shields.io/github/languages/top/wangweiwei/video-metadata-thumbnails)](https://github.com/wangweiwei/video-metadata-thumbnails)
+[![Examle Online](https://img.shields.io/badge/-Example--Online-blue)](https://www.ellow.cn/examples/video-metadata-thumbnails/index.html)
 
 Convenience method(or Video object) to get metadata and thumbnails of HTML5 video or audio(only metadata) Blob.
 
@@ -95,7 +97,7 @@ console.log('Thumbnails:', await video.getThumbnails({
 
 ## **Example**
 
-[![Software License](https://img.shields.io/badge/clicke-me-red.svg)](https://www.ellow.cn/examples/video-metadata-thumbnails/index.html)
+[![Example Online](https://img.shields.io/badge/-在线例子-blue?style=for-the-badge&logo=internet-explorer)](https://www.ellow.cn/examples/video-metadata-thumbnails/index.html)
 
 ## **⚠️  Notice**
 
