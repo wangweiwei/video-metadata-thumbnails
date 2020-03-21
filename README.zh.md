@@ -29,11 +29,11 @@ yarn add video-metadata-thumbnails
 
 ### 通过getMetadata和getThumbnails方法
 
-​	将 `video-metadata-thumbnails.iife.js`[![Download Javascript File](https://img.shields.io/badge/-下载Javascript文件-blue?logo=javascript)](https://raw.githubusercontent.com/wangweiwei/video-metadata-thumbnails/master/lib/video-metadata-thumbnails.iife.js) 添加到你的`script`标签中，然后通过`Promise`的 `then`获取 元数据或者视频缩略图：
+​	将 `video-metadata-thumbnails.iife.js`添加到你的`script`标签中，然后通过`Promise`的 `then`获取 元数据或者视频缩略图：
 
 ```html
 <input type="file" onchange="onChange(this.files)" />
-<script src="your cdn path/video-metadata-thumbnails.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/video-metadata-thumbnails/lib/video-metadata-thumbnails.iife.js"></script>
 <script>
 function onChange(files) {
   __video_metadata_thumbnails__.getMetadata(files[0]).then(function(metadata) {
