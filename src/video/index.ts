@@ -345,9 +345,9 @@ export class Video {
  *
  * @param blob string | Blob
  *
- * @return Promise<IMeatadata> video元数据信息
+ * @return Promise<IMetadata> video元数据信息
  */
-export async function getMetadata(blob: string | Blob): Promise<IMeatadata> {
+export async function getMetadata(blob: string | Blob): Promise<IMetadata> {
   const video: Video = new Video(blob);
   const metadata = await video.getMetadata();
   return metadata;
