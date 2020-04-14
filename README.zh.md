@@ -1,15 +1,40 @@
-# **Video Metadata & Thumbnails**
+<p align="center">
+  <a href="https://www.ellow.cn/examples/vue-resize-observer/index.html" target="_blank">
+    <img width="160" src="https://raw.githubusercontent.com/wangweiwei/video-metadata-thumbnails/master/example/video.png" alt="logo">
+  </a>
+</p>
 
-[![Latest Version on NPM](https://img.shields.io/npm/v/video-metadata-thumbnails)](https://npmjs.com/package/video-metadata-thumbnails)
-[![Issue](https://img.shields.io/badge/-help--wanted-brightgreen)](https://github.com/wangweiwei/video-metadata-thumbnails/issues)
-[![Software License](https://img.shields.io/npm/l/video-metadata-thumbnails)](https://github.com/wangweiwei/video-metadata-thumbnails/blob/master/LICENSE)
-[![Contributors Anon](https://img.shields.io/github/contributors-anon/wangweiwei/video-metadata-thumbnails)](https://github.com/wangweiwei/video-metadata-thumbnails)
-[![Code Size](https://img.shields.io/github/languages/code-size/wangweiwei/video-metadata-thumbnails)](https://github.com/wangweiwei/video-metadata-thumbnails)
-[![Languages Count](https://img.shields.io/github/languages/count/wangweiwei/video-metadata-thumbnails)](https://github.com/wangweiwei/video-metadata-thumbnails)
-[![Languages](https://img.shields.io/github/languages/top/wangweiwei/video-metadata-thumbnails)](https://github.com/wangweiwei/video-metadata-thumbnails)
-[![Examle Online](https://img.shields.io/badge/-Example--Online-blue)](https://www.ellow.cn/examples/video-metadata-thumbnails/index.html)
+<h2 align="center">Video Metadata & Thumbnails</h2>
 
-通过HTML5的Blob获取音视频元数据和帧缩略图（仅视频）。
+<p>
+  <a href="https://npmjs.com/package/video-metadata-thumbnails" rel="nofollow">
+    <img alt="Latest Version on NPM" src="https://img.shields.io/npm/v/video-metadata-thumbnails" style="max-width:100%;">
+  </a>
+  <a href="https://github.com/wangweiwei/video-metadata-thumbnails/issues">
+    <img alt="Issue" src="https://img.shields.io/badge/-help--wanted-brightgreen" style="max-width:100%;">
+  </a>
+  <a href="https://github.com/wangweiwei/video-metadata-thumbnails/blob/master/LICENSE">
+    <img alt="Software License" src="https://img.shields.io/npm/l/video-metadata-thumbnails" style="max-width:100%;">
+  </a>
+  <a href="https://github.com/wangweiwei/video-metadata-thumbnails">
+    <img alt="Contributors Anon" src="https://img.shields.io/github/contributors-anon/wangweiwei/video-metadata-thumbnails" style="max-width:100%;">
+  </a>
+  <a href="https://github.com/wangweiwei/video-metadata-thumbnails">
+    <img alt="Code Size" src="https://img.shields.io/github/languages/code-size/wangweiwei/video-metadata-thumbnails" style="max-width:100%;">
+  </a>
+  <a href="https://github.com/wangweiwei/video-metadata-thumbnails">
+    <img alt="Languages Count" src="https://img.shields.io/github/languages/count/wangweiwei/video-metadata-thumbnails" style="max-width:100%;">
+  </a>
+  <br/>
+  <a href="https://github.com/wangweiwei/video-metadata-thumbnails">
+    <img alt="Languages" src="https://img.shields.io/github/languages/top/wangweiwei/video-metadata-thumbnails" style="max-width:100%;">
+  </a>
+  <a href="https://www.ellow.cn/examples/video-metadata-thumbnails/index.html" rel="nofollow">
+    <img alt="Examle Online" src="https://img.shields.io/badge/-Example--Online-blue" style="max-width:100%;">
+  </a>
+</p>
+
+通过HTML5的Blob获取视频元数据和帧缩略图。
 
 [English](https://github.com/wangweiwei/video-metadata-thumbnails/blob/master/README.md) | 简体中文
 
