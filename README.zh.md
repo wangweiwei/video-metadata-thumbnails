@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://www.ellow.cn/examples/vue-resize-observer/index.html" target="_blank">
-    <img width="160" src="https://raw.githubusercontent.com/wangweiwei/video-metadata-thumbnails/master/example/video.png" alt="logo">
+    <img width="160" src="https://raw.githubusercontent.com/wangweiwei/video-metadata-thumbnails/master/examples/video.png" alt="logo">
   </a>
 </p>
 
 <h2 align="center">Video Metadata & Thumbnails</h2>
 
-<p>
+<p align="center">
   <a href="https://npmjs.com/package/video-metadata-thumbnails" rel="nofollow">
     <img alt="Latest Version on NPM" src="https://img.shields.io/npm/v/video-metadata-thumbnails" style="max-width:100%;">
   </a>
