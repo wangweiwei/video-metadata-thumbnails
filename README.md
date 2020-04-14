@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.ellow.cn/examples/vue-resize-observer/index.html" target="_blank">
+  <a href="https://www.ellow.cn/examples/video-metadata-thumbnails/index.html" target="_blank">
     <img width="160" src="https://raw.githubusercontent.com/wangweiwei/video-metadata-thumbnails/master/examples/video.png" alt="logo">
   </a>
 </p>
