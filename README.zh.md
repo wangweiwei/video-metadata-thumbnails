@@ -26,6 +26,9 @@
     <img alt="Languages Count" src="https://img.shields.io/github/languages/count/wangweiwei/video-metadata-thumbnails" style="max-width:100%;">
   </a>
   <br/>
+  <a href="https://npmjs.com/package/video-metadata-thumbnails" >
+    <img alt="Downloads" src="https://img.shields.io/npm/dt/video-metadata-thumbnails.svg" style="max-width:100%;">
+  </a>
   <a href="https://github.com/wangweiwei/video-metadata-thumbnails">
     <img alt="Languages" src="https://img.shields.io/github/languages/top/wangweiwei/video-metadata-thumbnails" style="max-width:100%;">
   </a>
