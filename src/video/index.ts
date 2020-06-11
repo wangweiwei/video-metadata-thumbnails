@@ -71,6 +71,8 @@ export class Video {
     // 初始化视频元素
     this.videoElement = document.createElement('video') as HTMLVideoElement;
     this.videoElement.preload = 'metadata';
+    this.videoElement.muted = true;
+    this.videoElement.volume = 0;
 
     // 初始化canvas
     const canvas: HTMLCanvasElement = document.createElement('canvas') as HTMLCanvasElement;
@@ -191,7 +193,18 @@ export class Video {
           reject(error);
         }
       };
+      const progressHandler = () => {
+        this.videoElement.play();
+        this.videoElement.removeEventListener('progress', progressHandler, false);
+      }
+
+      // 判断如果是Safari
+      if(/^((?!chrome).)*safari((?!chrome).)*$/i.test(navigator.userAgent)) {
+        this.videoElement.addEventListener('progress', progressHandler, false);
+      }
+
       const endedHandler = () => {
+        this.videoElement.removeEventListener('progress', progressHandler, false);
         this.videoElement.removeEventListener('ended', endedHandler, false);
         this.videoElement.removeEventListener('canplaythrough', canplayHandler, false);
         this.videoElement.removeEventListener('timeupdate', timeupdateHandler, false);
