@@ -22,8 +22,7 @@ function bind(fn, thisArg) {
  * @param {Function} fn
  */
 function Promise(fn) {
-  if (!(this instanceof Promise))
-    throw new TypeError('Promises must be constructed via new');
+  if (!(this instanceof Promise)) throw new TypeError('Promises must be constructed via new');
   if (typeof fn !== 'function') throw new TypeError('not a function');
   /** @type {!number} */
   this._state = 0;
@@ -66,12 +65,8 @@ function handle(self, deferred) {
 function resolve(self, newValue) {
   try {
     // Promise Resolution Procedure: https://github.com/promises-aplus/promises-spec#the-promise-resolution-procedure
-    if (newValue === self)
-      throw new TypeError('A promise cannot be resolved with itself.');
-    if (
-      newValue &&
-      (typeof newValue === 'object' || typeof newValue === 'function')
-    ) {
+    if (newValue === self) throw new TypeError('A promise cannot be resolved with itself.');
+    if (newValue && (typeof newValue === 'object' || typeof newValue === 'function')) {
       var then = newValue.then;
       if (newValue instanceof Promise) {
         self._state = 3;
