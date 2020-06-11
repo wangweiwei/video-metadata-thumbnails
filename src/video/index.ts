@@ -73,19 +73,14 @@ export class Video {
     this.videoElement.preload = 'metadata';
 
     // 初始化canvas
-    const canvas: HTMLCanvasElement = document.createElement(
-      'canvas'
-    ) as HTMLCanvasElement;
+    const canvas: HTMLCanvasElement = document.createElement('canvas') as HTMLCanvasElement;
     this.canvas = canvas;
     this.canvasContext = canvas.getContext('2d') as CanvasRenderingContext2D;
 
     // 赋值src
     const URL = window.URL || window.webkitURL;
     this.videoElement.src =
-      typeof blob === 'string' || blob instanceof String
-        ? (blob as string)
-        : URL.createObjectURL(blob);
-
+      typeof blob === 'string' || blob instanceof String ? (blob as string) : URL.createObjectURL(blob);
 
     // 视频播放结束相关回收
     const endedHandler = () => {
@@ -133,8 +128,7 @@ export class Video {
         const { videoWidth, videoHeight, duration } = videoElement;
         const { quality, interval, start, end, scale } = option;
         const { currentTime } = videoElement;
-        const isEnded =
-          currentTime >= duration || currentTime > (end === undefined  ? duration : end);
+        const isEnded = currentTime >= duration || currentTime > (end === undefined ? duration : end);
         const $interval = interval || 1;
         const $videoWidth = videoWidth * (scale || 1);
         const $videoHeight = videoHeight * (scale || 1);
@@ -142,19 +136,11 @@ export class Video {
         try {
           this.canvas.width = $videoWidth;
           this.canvas.height = $videoHeight;
-          this.canvasContext.drawImage(
-            this.videoElement,
-            0,
-            0,
-            $videoWidth,
-            $videoHeight
-          );
+          this.canvasContext.drawImage(this.videoElement, 0, 0, $videoWidth, $videoHeight);
 
           // blob 兼容性
           if (!this.canvas.toBlob) {
-            const binStr = atob(
-              this.canvas.toDataURL('image/jpeg', quality).split(',')[1]
-            );
+            const binStr = atob(this.canvas.toDataURL('image/jpeg', quality).split(',')[1]);
             const len = binStr.length;
             const arr = new Uint8Array(len);
 
@@ -167,16 +153,8 @@ export class Video {
             canvasContext.restore();
 
             if (isEnded) {
-              videoElement.removeEventListener(
-                'canplaythrough',
-                canplayHandler,
-                false
-              );
-              videoElement.removeEventListener(
-                'timeupdate',
-                timeupdateHandler,
-                false
-              );
+              videoElement.removeEventListener('canplaythrough', canplayHandler, false);
+              videoElement.removeEventListener('timeupdate', timeupdateHandler, false);
               resolve(this.thumbnails);
               return;
             }
@@ -193,16 +171,8 @@ export class Video {
                 canvasContext.restore();
 
                 if (isEnded) {
-                  videoElement.removeEventListener(
-                    'canplaythrough',
-                    canplayHandler,
-                    false
-                  );
-                  videoElement.removeEventListener(
-                    'timeupdate',
-                    timeupdateHandler,
-                    false
-                  );
+                  videoElement.removeEventListener('canplaythrough', canplayHandler, false);
+                  videoElement.removeEventListener('timeupdate', timeupdateHandler, false);
                   resolve(this.thumbnails);
                   return;
                 }
@@ -223,27 +193,11 @@ export class Video {
       };
       const endedHandler = () => {
         this.videoElement.removeEventListener('ended', endedHandler, false);
-        this.videoElement.removeEventListener(
-          'canplaythrough',
-          canplayHandler,
-          false
-        );
-        this.videoElement.removeEventListener(
-          'timeupdate',
-          timeupdateHandler,
-          false
-        );
+        this.videoElement.removeEventListener('canplaythrough', canplayHandler, false);
+        this.videoElement.removeEventListener('timeupdate', timeupdateHandler, false);
       };
-      this.videoElement.addEventListener(
-        'canplaythrough',
-        canplayHandler,
-        false
-      );
-      this.videoElement.addEventListener(
-        'timeupdate',
-        timeupdateHandler,
-        false
-      );
+      this.videoElement.addEventListener('canplaythrough', canplayHandler, false);
+      this.videoElement.addEventListener('timeupdate', timeupdateHandler, false);
       this.videoElement.addEventListener('ended', endedHandler, false);
     });
   }
@@ -264,16 +218,8 @@ export class Video {
           //  https://bugs.chromium.org/p/chromium/issues/detail?id=642012
           if (duration === Infinity) {
             const timeupdateHandler = () => {
-              this.videoElement.removeEventListener(
-                'timeupdate',
-                timeupdateHandler,
-                false
-              );
-              this.videoElement.removeEventListener(
-                'loadedmetadata',
-                loadedmetadataHandler,
-                false
-              );
+              this.videoElement.removeEventListener('timeupdate', timeupdateHandler, false);
+              this.videoElement.removeEventListener('loadedmetadata', loadedmetadataHandler, false);
               resolve({
                 width: Math.floor(this.videoElement.videoWidth * 100) / 100,
                 height: Math.floor(this.videoElement.videoHeight * 100) / 100,
@@ -281,11 +227,7 @@ export class Video {
               });
               this.videoElement.currentTime = 0;
             };
-            this.videoElement.addEventListener(
-              'timeupdate',
-              timeupdateHandler,
-              false
-            );
+            this.videoElement.addEventListener('timeupdate', timeupdateHandler, false);
             this.videoElement.currentTime = Number.MAX_SAFE_INTEGER;
           } else {
             resolve({
@@ -293,47 +235,29 @@ export class Video {
               height: Math.floor(videoHeight * 100) / 100,
               duration: Math.floor(duration * 100) / 100
             });
-            this.videoElement.removeEventListener(
-              'loadedmetadata',
-              loadedmetadataHandler,
-              false
-            );
+            this.videoElement.removeEventListener('loadedmetadata', loadedmetadataHandler, false);
           }
         } catch (error) {
           reject(error);
         }
       };
       const endedHandler = () => {
-        this.videoElement.removeEventListener(
-          'loadedmetadata',
-          loadedmetadataHandler,
-          false
-        );
+        this.videoElement.removeEventListener('loadedmetadata', loadedmetadataHandler, false);
         this.videoElement.removeEventListener('ended', endedHandler, false);
         this.videoElement.removeEventListener('error', errorHandler, false);
       };
       const errorHandler = () => {
         const { error } = this.videoElement;
         if (error) {
-          reject(
-            new Error(`__NAME__ error ${error.code}; details: ${error.message}`)
-          );
+          reject(new Error(`__NAME__ error ${error.code}; details: ${error.message}`));
         } else {
           reject(new Error('__NAME__ unknown error'));
         }
-        this.videoElement.removeEventListener(
-          'loadedmetadata',
-          loadedmetadataHandler,
-          false
-        );
+        this.videoElement.removeEventListener('loadedmetadata', loadedmetadataHandler, false);
         this.videoElement.removeEventListener('ended', endedHandler, false);
         this.videoElement.removeEventListener('error', errorHandler, false);
       };
-      this.videoElement.addEventListener(
-        'loadedmetadata',
-        loadedmetadataHandler,
-        false
-      );
+      this.videoElement.addEventListener('loadedmetadata', loadedmetadataHandler, false);
       this.videoElement.addEventListener('ended', endedHandler, false);
       this.videoElement.addEventListener('error', errorHandler, false);
     });
@@ -362,7 +286,7 @@ export async function getMetadata(blob: string | Blob): Promise<IMetadata> {
  *
  * @return Promise<(Blob | null)[]> 帧图片Blob集合
  */
-export async function getThumbnails(blob: string | Blob, option?: IOption) : Promise<IThumbnail[]> {
+export async function getThumbnails(blob: string | Blob, option?: IOption): Promise<IThumbnail[]> {
   const video: Video = new Video(blob);
   const thumbnails = await video.getThumbnails(option);
   return thumbnails;
