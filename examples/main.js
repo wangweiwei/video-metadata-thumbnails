@@ -1,5 +1,10 @@
 function onChange(files) {
-  getThumbnails(files[0]);
+  var file = files[0];
+  if ( file.type.split('/')[0] != 'video' ){
+    alert('Please select a file with a `video/*` mime-type');
+    return false;
+  }
+  getThumbnails(file);
 }
 
 function getOption() {
