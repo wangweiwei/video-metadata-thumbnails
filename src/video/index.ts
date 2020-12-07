@@ -208,10 +208,25 @@ export class Video {
         this.videoElement.removeEventListener('ended', endedHandler, false);
         this.videoElement.removeEventListener('canplaythrough', canplayHandler, false);
         this.videoElement.removeEventListener('timeupdate', timeupdateHandler, false);
+        this.videoElement.removeEventListener('error', errorHandler, false);
+      };
+      const errorHandler = () => {
+        const { error } = this.videoElement;
+        if (error) {
+          reject(new Error(`__NAME__ error ${error.code}; details: ${error.message}`));
+        } else {
+          reject(new Error('__NAME__ unknown error'));
+        }
+        this.videoElement.removeEventListener('progress', progressHandler, false);
+        this.videoElement.removeEventListener('ended', endedHandler, false);
+        this.videoElement.removeEventListener('canplaythrough', canplayHandler, false);
+        this.videoElement.removeEventListener('timeupdate', timeupdateHandler, false);
+        this.videoElement.removeEventListener('error', errorHandler, false);
       };
       this.videoElement.addEventListener('canplaythrough', canplayHandler, false);
       this.videoElement.addEventListener('timeupdate', timeupdateHandler, false);
       this.videoElement.addEventListener('ended', endedHandler, false);
+      this.videoElement.addEventListener('error', errorHandler, false);
     });
   }
 
