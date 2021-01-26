@@ -73,6 +73,7 @@ export class Video {
     this.videoElement.preload = 'metadata';
     this.videoElement.muted = true;
     this.videoElement.volume = 0;
+    this.videoElement.crossOrigin = 'anonymous';
 
     // 初始化canvas
     const canvas: HTMLCanvasElement = document.createElement('canvas') as HTMLCanvasElement;
